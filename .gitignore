@@ -1,0 +1,5 @@
+.env
+*.csv
+*.docx
+*.doc
+chroma_db/

@@ -1,0 +1,13 @@
+streamlit
+pandas
+google-genai
+langgraph
+langchain-core
+chromadb
+sentence-transformers
+torch
+torchvision
+mlflow
+boto3
+python-dotenv
+grandalf

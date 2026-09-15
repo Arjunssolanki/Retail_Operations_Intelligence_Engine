@@ -1,0 +1,294 @@
+[2026-09-15 14:15:53] INFO [setup_infrastructure.verify_s3_data_lake:9]: Verifying access to AWS S3 bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 14:15:55] INFO [setup_infrastructure.verify_s3_data_lake:20]: Successfully verified ownership and access to bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 14:32:31] INFO [generate_and_upload_data.generate_big_retail_ecosystem:11]: Initializing high-volume relational retail data generation engine.
+[2026-09-15 14:32:31] INFO [generate_and_upload_data.generate_big_retail_ecosystem:30]: Generating 10,000 customer records...
+[2026-09-15 14:32:31] INFO [generate_and_upload_data.generate_big_retail_ecosystem:43]: Generating 500,000 sales transactions records...
+[2026-09-15 14:32:39] INFO [generate_and_upload_data.generate_big_retail_ecosystem:61]: High-volume relational datasets successfully generated in system memory.
+[2026-09-15 14:32:39] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 14:32:39] INFO [generate_and_upload_data.execute_relational_upload:77]: Saved local relational big-data checkpoint: products.csv
+[2026-09-15 14:32:40] INFO [generate_and_upload_data.execute_relational_upload:88]: Successfully uploaded large asset 'products.csv' to cloud data lake.
+[2026-09-15 14:32:40] INFO [generate_and_upload_data.execute_relational_upload:77]: Saved local relational big-data checkpoint: customers.csv
+[2026-09-15 14:32:40] INFO [generate_and_upload_data.execute_relational_upload:88]: Successfully uploaded large asset 'customers.csv' to cloud data lake.
+[2026-09-15 14:32:42] INFO [generate_and_upload_data.execute_relational_upload:77]: Saved local relational big-data checkpoint: sales.csv
+[2026-09-15 14:32:57] INFO [generate_and_upload_data.execute_relational_upload:88]: Successfully uploaded large asset 'sales.csv' to cloud data lake.
+[2026-09-15 14:32:57] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 14:32:57] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 15:57:48] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 15:57:48] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 15:57:48] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 15:57:49] INFO [vector_store.__init__:10]: Initializing vector repository connection space.
+[2026-09-15 15:59:19] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 15:59:20] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 15:59:20] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 15:59:20] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 15:59:20] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 15:59:20] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 15:59:20] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 15:59:30] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:00:54] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 16:00:54] INFO [vector_store.populate_index:18]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 16:01:21] INFO [vector_store.populate_index:31]: Vector space indexing completed successfully.
+[2026-09-15 16:01:21] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 10000 entities into semantic documents.
+[2026-09-15 16:01:24] INFO [vector_store.populate_index:18]: Upserting 10000 structural mappings into Chroma DB.
+[2026-09-15 16:13:42] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:13:42] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:13:42] INFO [vector_store.__init__:10]: Initializing vector repository connection space.
+[2026-09-15 16:18:01] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:18:01] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:18:01] INFO [vector_store.__init__:10]: Initializing vector repository connection space.
+[2026-09-15 16:20:28] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:20:28] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:20:29] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:22:14] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:22:14] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:22:14] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:22:15] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:22:26] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:22:26] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:22:26] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:22:26] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:25:58] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:25:58] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:25:59] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:30:32] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:30:32] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:30:32] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:30:32] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:31:23] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:31:24] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:31:24] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:31:24] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:31:24] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:31:25] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:31:25] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:31:35] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:38:42] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:38:42] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:38:42] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:38:42] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:39:28] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:39:29] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:39:29] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:39:29] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:39:29] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:39:29] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:39:29] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:39:39] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:41:53] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 16:41:53] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 16:41:53] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:41:53] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 16:41:53] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 16:41:54] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:44:58] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:44:58] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:44:59] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:45:41] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:45:42] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:45:42] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:45:42] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:45:42] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:45:42] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:45:42] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:45:52] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:45:57] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 16:45:57] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 16:45:57] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:45:57] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 16:45:57] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 16:45:57] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:46:41] INFO [graph_engine.__init__:19]: Initializing LangGraph engine structure with MLflow tracking backend.
+[2026-09-15 16:46:41] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:46:44] INFO [graph_engine.run_monitored_pipeline:68]: MLflow Run started: 04f4dfc3434240628185cb289d9e5675
+[2026-09-15 16:46:44] INFO [graph_engine.node_retrieve_context:94]: Retrieving entity contexts for query: 'Which product category generated the highest sales revenue?'
+[2026-09-15 16:46:44] INFO [vector_store.semantic_search:42]: Querying vector database for: 'Which product category generated the highest sales revenue?'
+[2026-09-15 16:46:45] INFO [graph_engine.node_generate_code:100]: Generating data processing script options via Gemini.
+[2026-09-15 16:47:16] INFO [graph_engine.__init__:19]: Initializing LangGraph engine structure with MLflow tracking backend.
+[2026-09-15 16:47:16] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:47:16] INFO [graph_engine.run_monitored_pipeline:68]: MLflow Run started: ab2298b1bf6b45428f1d86f86fdc5820
+[2026-09-15 16:47:16] INFO [graph_engine.node_retrieve_context:94]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 16:47:16] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 16:47:16] INFO [graph_engine.node_generate_code:100]: Generating data processing script options via Gemini.
+[2026-09-15 16:51:43] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:51:43] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:51:43] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:52:29] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:52:29] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:52:29] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:52:30] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:52:30] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:52:30] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:52:30] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:52:40] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:52:42] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 16:52:42] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 16:52:42] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:52:42] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 16:52:42] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 16:52:42] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:52:51] INFO [graph_engine.__init__:19]: Initializing LangGraph engine structure with Gemini backend.
+[2026-09-15 16:52:51] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:52:54] INFO [graph_engine.run_monitored_pipeline:71]: MLflow Run started: 9ce60a714d3e4190af31500c8898cfba
+[2026-09-15 16:52:54] INFO [graph_engine.node_retrieve_context:98]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 16:52:54] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 16:52:54] INFO [graph_engine.node_generate_code:104]: Generating data processing script options via Gemini.
+[2026-09-15 16:56:16] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:56:16] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:56:16] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:56:16] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:57:01] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:57:02] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:57:02] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:57:02] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:57:02] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:57:03] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:57:03] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:57:12] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 16:57:17] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 16:57:17] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 16:57:17] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:57:17] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 16:57:17] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 16:57:18] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 16:57:31] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 16:57:31] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:57:36] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 8a5ac776d7b34d54951da33a8222a7a6
+[2026-09-15 16:57:36] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 16:57:36] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 16:57:36] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 16:59:16] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 16:59:16] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 16:59:16] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 16:59:48] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 16:59:48] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 16:59:48] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 16:59:48] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 16:59:48] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 16:59:49] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 16:59:49] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 16:59:59] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 17:00:04] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 17:00:04] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 17:00:04] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:00:04] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 17:00:04] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 17:00:04] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:00:23] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:00:23] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:00:24] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:00:24] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:00:29] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: e11ec9583816450db407043b43f115af
+[2026-09-15 17:00:29] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 070a0d321a724e1785676d5f7dc614a6
+[2026-09-15 17:00:30] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 17:00:30] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 17:00:30] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 17:00:30] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 17:00:30] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:00:30] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:01:10] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 17:01:10] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 17:01:10] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 17:01:10] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:01:38] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 17:01:38] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 17:01:38] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 17:01:38] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 17:01:38] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 17:01:39] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 17:01:39] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 17:01:49] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 17:01:53] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 17:01:53] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 17:01:54] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:01:54] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 17:01:54] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 17:01:54] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:02:00] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:02:00] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:02:05] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 29e0b339b5d8450ab0fc8b45c8161ba4
+[2026-09-15 17:02:05] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 17:02:05] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 17:02:05] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:04:38] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:04:38] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:04:40] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 1e46025122fc4f30ae5c3effdf91bc97
+[2026-09-15 17:04:40] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'What was the total revenue across all transactions?'
+[2026-09-15 17:04:40] INFO [vector_store.semantic_search:42]: Querying vector database for: 'What was the total revenue across all transactions?'
+[2026-09-15 17:04:40] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:04:43] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:04:43] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:04:43] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:04:50] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:04:51] INFO [graph_engine.node_summarize_insight:160]: Synthesizing final business analysis metrics overview via Native Gemini Client.
+[2026-09-15 17:05:03] INFO [graph_engine.export_graph_flowchart:187]: Exported graph visual image using Mermaid engine: workflow_flowchart.png
+[2026-09-15 17:45:10] INFO [streamlit_app.initialize_core_services:19]: Initializing core system service instances.
+[2026-09-15 17:45:10] INFO [s3_manager.__init__:11]: Initializing connection to AWS S3 Storage Space.
+[2026-09-15 17:45:11] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:46:21] INFO [s3_manager.list_available_datasets:21]: Scanning files stored inside cloud bucket: 'retail-operations-intelligence-engine-lake'
+[2026-09-15 17:46:22] INFO [s3_manager.list_available_datasets:26]: Discovered 3 target CSV datasets in cloud environment.
+[2026-09-15 17:46:22] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: products.csv
+[2026-09-15 17:46:22] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (8, 4)
+[2026-09-15 17:46:22] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: customers.csv
+[2026-09-15 17:46:23] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (10000, 4)
+[2026-09-15 17:46:23] INFO [s3_manager.stream_csv_to_dataframe:35]: Streaming dataset stream target: sales.csv
+[2026-09-15 17:46:32] INFO [s3_manager.stream_csv_to_dataframe:40]: Stream successful. Cached dataframe matrix shape: (500000, 8)
+[2026-09-15 17:46:34] INFO [data_processor.transform_metadata_table:10]: Transforming product table with 8 entities into semantic documents.
+[2026-09-15 17:46:34] INFO [vector_store.populate_index:26]: Upserting 8 structural mappings into Chroma DB.
+[2026-09-15 17:46:35] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:46:35] INFO [data_processor.transform_metadata_table:10]: Transforming customer table with 5 entities into semantic documents.
+[2026-09-15 17:46:35] INFO [vector_store.populate_index:26]: Upserting 5 structural mappings into Chroma DB.
+[2026-09-15 17:46:35] INFO [vector_store.populate_index:39]: Vector space indexing completed successfully.
+[2026-09-15 17:46:40] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:46:40] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:46:47] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: f81234376e474bb58383beab35e8126b
+[2026-09-15 17:46:47] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'Find the top 3 spending customers and tell me which cities they are from'
+[2026-09-15 17:46:47] INFO [vector_store.semantic_search:42]: Querying vector database for: 'Find the top 3 spending customers and tell me which cities they are from'
+[2026-09-15 17:46:47] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:46:53] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:46:53] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:46:53] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:47:00] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:47:00] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:47:00] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:47:11] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:47:12] INFO [graph_engine.node_summarize_insight:160]: Synthesizing final business analysis metrics overview via Native Gemini Client.
+[2026-09-15 17:47:23] INFO [graph_engine.export_graph_flowchart:187]: Exported graph visual image using Mermaid engine: workflow_flowchart.png
+[2026-09-15 17:49:07] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:49:07] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:49:09] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 2a8193c0050c4dbe9f6ebfca2666712a
+[2026-09-15 17:49:09] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'porduct performance matrix'
+[2026-09-15 17:49:09] INFO [vector_store.semantic_search:42]: Querying vector database for: 'porduct performance matrix'
+[2026-09-15 17:49:09] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:49:16] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:49:16] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:49:16] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:49:27] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:49:27] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:49:27] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:49:38] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:49:40] INFO [graph_engine.node_summarize_insight:160]: Synthesizing final business analysis metrics overview via Native Gemini Client.
+[2026-09-15 17:49:52] INFO [graph_engine.export_graph_flowchart:187]: Exported graph visual image using Mermaid engine: workflow_flowchart.png
+[2026-09-15 17:50:48] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:50:48] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:50:49] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 95d0c97c0ae14f2389e84a6cfaeb8881
+[2026-09-15 17:50:49] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'BCG Matrix'
+[2026-09-15 17:50:49] INFO [vector_store.semantic_search:42]: Querying vector database for: 'BCG Matrix'
+[2026-09-15 17:50:50] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:51:08] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:51:10] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'growth_median' is not defined
+[2026-09-15 17:51:10] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:51:27] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:51:27] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:51:27] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:51:48] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:51:48] ERROR [graph_engine.node_execute_sandbox:151]: Sandbox runtime execution failed: name 'sales' is not defined
+[2026-09-15 17:51:48] INFO [graph_engine.node_summarize_insight:160]: Synthesizing final business analysis metrics overview via Native Gemini Client.
+[2026-09-15 17:51:51] INFO [graph_engine.export_graph_flowchart:187]: Exported graph visual image using Mermaid engine: workflow_flowchart.png
+[2026-09-15 17:53:28] INFO [graph_engine.__init__:20]: Initializing LangGraph engine structure with Native Google GenAI client.
+[2026-09-15 17:53:28] INFO [vector_store.__init__:11]: Initializing vector repository connection space.
+[2026-09-15 17:53:30] INFO [graph_engine.run_monitored_pipeline:74]: MLflow Run started: 38470764ced04553bfa9de017387527f
+[2026-09-15 17:53:30] INFO [graph_engine.node_retrieve_context:101]: Retrieving entity contexts for query: 'I want to analyze my business portfolio using a BCG Matrix, but I need help figuring out where my products fit. Act as a business strategist and ask me a series of questions, one at a time, about my products and market growth so we can map them out together."'
+[2026-09-15 17:53:30] INFO [vector_store.semantic_search:42]: Querying vector database for: 'I want to analyze my business portfolio using a BCG Matrix, but I need help figuring out where my products fit. Act as a business strategist and ask me a series of questions, one at a time, about my products and market growth so we can map them out together."'
+[2026-09-15 17:53:30] INFO [graph_engine.node_generate_code:107]: Generating data processing script options via Native Gemini SDK.
+[2026-09-15 17:53:40] INFO [graph_engine.node_execute_sandbox:143]: Starting safe local code sandbox verification layout.
+[2026-09-15 17:53:40] INFO [graph_engine.node_summarize_insight:160]: Synthesizing final business analysis metrics overview via Native Gemini Client.
