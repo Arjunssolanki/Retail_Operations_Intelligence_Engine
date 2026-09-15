@@ -15,10 +15,8 @@ Traditional Text RAG pipelines break paragraphs into arbitrary chunks, which des
 1. **Semantic Vector Track:** Master dimension profiles (`products.csv` and a structural blueprint sample of `customers.csv`) are mapped into conversational sentences, embedded locally via an open-source sentence transformer model (`all-MiniLM-L6-v2`), and stored in **ChromaDB**. This allows the AI agent to look up specific product IDs and metadata contexts semantically.
 2. **Deterministic Code Execution Track:** The heavy transaction ledger (`sales.csv`, holding **500,000 rows**) is stored natively in system memory as a cached Pandas DataFrame. The agent uses structural schemas to write optimized, vectorized Python code. The engine then runs code sandboxes over all half-million entries in milliseconds.
 
-````text
 ## LangGraph Agentic Lifecycle & Self-Correction Pipeline
-
-![Agent Flowchart](./agent_flowchart.jpeg)
+   ![Agent Flowchart](./agent_flowchart.jpeg)
 
 ### 📊 Ingested Data Warehouse Profile
 
@@ -141,3 +139,83 @@ result = sales_df["Total_Revenue"].sum()
 ```
 
 The runtime error trace is piped straight back into Gemini. The agent reviews the crash log, fixes the code snippet, and re-executes the data query loop completely in the background—providing the end-user with clean insights and calculated metrics without a single application crash. All code execution attempts, retries, and processing latencies are securely logged to the **MLflow Dashboard**.
+## 🐳 Containerization Blueprints
+
+### 1. Dockerfile
+```dockerfile
+FROM python:3.12
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8501
+
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+```
+
+### 2. docker-compose.yml
+```yaml
+services:
+  app:
+    build: .
+    container_name: retail_intelligence_app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+      - ./mlruns:/app/mlruns
+    depends_on:
+      - mlflow
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.11.3
+    container_name: mlflow_tracking_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    command: mlflow ui --host 0.0.0.0 --port 5000
+```
+
+---
+
+## 🚀 Terminal Execution Guide
+
+### 📁 1. Workspace Storage Space Setup
+```bash
+mkdir logs mlruns
+```
+
+### 🐳 2. Build and Orchestrate the Container Stack
+```bash
+# Compile and package your CPU-optimized code image layers
+docker compose build
+
+# Launch the interactive app and telemetry tracking servers in detached background mode
+docker compose up -d
+
+# Verify that both services are online and mapped to their operational ports
+docker compose ps
+```
+
+### 🌐 3. System Access Endpoints
+* **Interactive Dashboard Control Room (Streamlit UI):** `http://localhost:8501`
+* **Governance Tracking Registry (MLflow UI):** `http://localhost:5000`
+
+### 🛠️ 4. Post-Deployment Container Management
+```bash
+# Track system printouts and node exceptions programmatically from running containers
+docker compose logs -f
+
+# Gracefully dismantle the virtual network stack and stop active containers
+docker compose down
+```
+
