@@ -15,10 +15,8 @@ Traditional Text RAG pipelines break paragraphs into arbitrary chunks, which des
 1. **Semantic Vector Track:** Master dimension profiles (`products.csv` and a structural blueprint sample of `customers.csv`) are mapped into conversational sentences, embedded locally via an open-source sentence transformer model (`all-MiniLM-L6-v2`), and stored in **ChromaDB**. This allows the AI agent to look up specific product IDs and metadata contexts semantically.
 2. **Deterministic Code Execution Track:** The heavy transaction ledger (`sales.csv`, holding **500,000 rows**) is stored natively in system memory as a cached Pandas DataFrame. The agent uses structural schemas to write optimized, vectorized Python code. The engine then runs code sandboxes over all half-million entries in milliseconds.
 
-````text
 ## LangGraph Agentic Lifecycle & Self-Correction Pipeline
-
-![Agent Flowchart](./agent_flowchart.jpeg)
+   ![Agent Flowchart](./agent_flowchart.jpeg)
 
 ### 📊 Ingested Data Warehouse Profile
 
